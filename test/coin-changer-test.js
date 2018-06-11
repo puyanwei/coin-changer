@@ -7,6 +7,6 @@ describe('#convertToQuarters', () => {
 });
 describe('#returnChange', () => {
   it('Returns remainder if there is any', () => {
-    expect(returnChange(100, 23).toEqual(8));
+    expect(returnChange(100, 23)).toEqual(8);
   });
 });

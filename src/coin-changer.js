@@ -5,3 +5,7 @@ function convertToQuarters(num) {
     return Math.floor(num / 25);
   }
 }
+
+function returnChange(numerator, denominator) {
+  return numerator % denominator;
+}
