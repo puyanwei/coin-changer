@@ -1,3 +1,7 @@
 function convertToQuarters(num) {
-  return Math.floor(num / 25);
+  if (num < 0) {
+    return 0;
+  } else {
+    return Math.floor(num / 25);
+  }
 }
