@@ -12,5 +12,12 @@ describe('#returnCoins', () => {
 describe('#returnChange', () => {
   it('Returns remainder if there is any', () => {
     expect(returnChange(100, 23)).toEqual(8);
+    expect(returnChange(75, 25)).toEqual(0);
+  });
+});
+
+describe('#coinChanger', () => {
+  it('Returns the change in a string', () => {
+    expect(coinChanger(100)).toEqual('QQQQ');
   });
 });
