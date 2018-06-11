@@ -9,3 +9,7 @@ function returnCoins(amount, coin) {
 function returnChange(numerator, denominator) {
   return numerator % denominator;
 }
+
+function convertToString(number, letter) {
+  return letter.repeat(number);
+}
