@@ -19,7 +19,7 @@ describe('#CoinChanger', () => {
   });
 
   describe('#dimes', () => {
-    it('Adds number of quarters to the till, and updates the amount left', () => {
+    it('Adds number of dimes to the till, and updates the amount left', () => {
       expect(coinChanger.dimes());
       expect(coinChanger.till).toEqual({ 25: 0, 10: 10, 1: 0 });
       expect(coinChanger.amount).toEqual(0);

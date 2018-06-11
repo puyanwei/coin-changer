@@ -7,6 +7,10 @@ class CoinChanger {
   quarters() {
     this.till[25] = this.amount / 25;
     this.amount = Math.floor(this.amount % 25);
-    console.log(this.amount);
+  }
+
+  dimes() {
+    this.till[10] = this.amount / 10;
+    this.amount = Math.floor(this.amount % 10);
   }
 }
