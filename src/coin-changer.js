@@ -13,4 +13,9 @@ class CoinChanger {
     this.till[10] = this.amount / 10;
     this.amount = Math.floor(this.amount % 10);
   }
+
+  pennies() {
+    this.till[1] = this.amount / 1;
+    this.amount = Math.floor(this.amount % 1);
+  }
 }

@@ -25,12 +25,20 @@ describe('#CoinChanger', () => {
       expect(coinChanger.amount).toEqual(0);
     });
   });
-]
+
   describe('#pennies', () => {
     it('Adds number of pennies to the till, and updates the amount left', () => {
       expect(coinChanger.pennies());
       expect(coinChanger.till).toEqual({ 25: 0, 10: 0, 1: 100 });
       expect(coinChanger.amount).toEqual(0);
+    });
+  });
+
+  describe('#returnCoins', () => {
+    it('Returns the correct amount of coins in a string', () => {
+      coinChanger.amount = 89;
+      let output = coinChanger.returnCoins();
+      expect(output).toEqual('QQQDPPPP');
     });
   });
 });
