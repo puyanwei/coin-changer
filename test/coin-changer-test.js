@@ -21,3 +21,9 @@ describe('#convertToString', () => {
     expect(convertToString(4, 'Q')).toEqual('QQQQ');
   });
 });
+
+describe('#controller', () => {
+  it('Converts the number into string based on number', () => {
+    expect(controller(100).toEqual('QQQQ');
+  });
+});
