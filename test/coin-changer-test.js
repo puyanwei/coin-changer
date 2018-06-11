@@ -1,5 +1,5 @@
 describe('#returnCoins', () => {
-  it('Returns correct the number of quarters', () => {
+  it('Returns correct the number of coins in a string', () => {
     expect(returnCoins(75, 25)).toEqual(3);
     expect(returnCoins(63, 25)).toEqual(2);
     expect(returnCoins(70, 10)).toEqual(7);
@@ -16,8 +16,8 @@ describe('#returnChange', () => {
   });
 });
 
-describe('#coinChanger', () => {
-  it('Returns the change in a string', () => {
-    expect(coinChanger(100)).toEqual('QQQQ');
+describe('#convertToString', () => {
+  it('Converts the number into string based on number', () => {
+    expect(convertToString(4, 'Q')).toEqual('QQQQ');
   });
 });
