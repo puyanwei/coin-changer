@@ -1,6 +1,6 @@
 class CoinChanger {
-  constructor(amount) {
-    this.amount = amount;
+  constructor() {
+    this.amount;
     this.till = {
       25: 0,
       10: 0,
