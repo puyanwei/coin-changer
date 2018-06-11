@@ -5,6 +5,13 @@ describe('#convertToQuarters', () => {
     expect(convertToQuarters(-33)).toEqual(0);
   });
 });
+
+describe('#convertToDimes', () => {
+  it('Returns correct the number of quarters', () => {
+    expect(convertToDimes(70)).toEqual(7);
+  });
+});
+
 describe('#returnChange', () => {
   it('Returns remainder if there is any', () => {
     expect(returnChange(100, 23)).toEqual(8);
