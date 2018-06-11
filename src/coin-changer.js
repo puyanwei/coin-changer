@@ -1,3 +1,3 @@
 function convertToQuarters(num) {
-  return num / 25;
+  return Math.floor(num / 25);
 }
