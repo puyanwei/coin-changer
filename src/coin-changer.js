@@ -1,15 +1,8 @@
-function convertToQuarters(num) {
-  if (num < 0) {
+function returnCoins(amount, coin) {
+  if (amount < 0) {
     return 0;
   } else {
-    return Math.floor(num / 25);
-  }
-}
-function convertToDimes(num) {
-  if (num < 0) {
-    return 0;
-  } else {
-    return Math.floor(num / 10);
+    return Math.floor(amount / coin);
   }
 }
 

@@ -1,14 +1,11 @@
-describe('#convertToQuarters', () => {
+describe('#returnCoins', () => {
   it('Returns correct the number of quarters', () => {
-    expect(convertToQuarters(75)).toEqual(3);
-    expect(convertToQuarters(63)).toEqual(2);
-    expect(convertToQuarters(-33)).toEqual(0);
-  });
-});
-
-describe('#convertToDimes', () => {
-  it('Returns correct the number of quarters', () => {
-    expect(convertToDimes(70)).toEqual(7);
+    expect(returnCoins(75, 25)).toEqual(3);
+    expect(returnCoins(63, 25)).toEqual(2);
+    expect(returnCoins(70, 10)).toEqual(7);
+    expect(returnCoins(63, 10)).toEqual(6);
+    expect(returnCoins(-33, 25)).toEqual(0);
+    expect(returnCoins(-33, 10)).toEqual(0);
   });
 });
 
