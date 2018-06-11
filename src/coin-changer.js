@@ -4,27 +4,16 @@ class CoinChanger {
     this.till = { 25: 0, 10: 0, 1: 0 };
   }
 
-  quarters() {
-    this.till[25] = 'Q'.repeat(Math.floor(this.amount / 25));
-    this.amount = this.amount % 25;
-  }
-
-  dimes() {
-    this.till[10] = 'D'.repeat(Math.floor(this.amount / 10));
-    this.amount = this.amount % 10;
-  }
-
-  pennies() {
-    this.till[1] = 'P'.repeat(Math.floor(this.amount / 1));
-    this.amount = this.amount % 1;
+  addToTillAndUpdateAmount(coin, letter) {
+    this.till[coin] = letter.repeat(Math.floor(this.amount / coin));
+    this.amount = this.amount % coin;
   }
 
   returnCoins() {
-    this.quarters();
-    this.dimes();
-    this.pennies();
+    this.addToTillAndUpdateAmount(25, 'Q');
+    this.addToTillAndUpdateAmount(10, 'D');
+    this.addToTillAndUpdateAmount(1, 'P');
     let string = this.till[25].concat(this.till[10]).concat(this.till[1]);
     return string;
-    console.log(this.till, this.amount);
   }
 }
