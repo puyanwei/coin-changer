@@ -17,7 +17,7 @@ class CoinChanger {
         this.amount = this.amount % coin;
     }
 
-    returnCoins() {
+    applyCountsAndreturnCoins() {
         let array = new Array();
 
         Object.keys(this.till)
@@ -33,6 +33,7 @@ class CoinChanger {
                 });
             }
         });
+
         return array;
     }
 }

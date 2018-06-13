@@ -95,10 +95,10 @@ describe('#CoinChanger', () => {
             expect(coinChanger.amount).toEqual(0);
         });
     });
-    fdescribe('#returnCoins', () => {
+    describe('#applyCountsAndreturnCoins', () => {
         it('Returns the correct amount of coins in an array', () => {
             coinChanger.amount = 199;
-            let output = coinChanger.returnCoins();
+            let output = coinChanger.applyCountsAndreturnCoins();
             expect(output).toEqual([100, 50, 20, 20, 5, 1, 1, 1, 1]);
         });
     });
