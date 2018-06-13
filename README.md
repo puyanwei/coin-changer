@@ -6,6 +6,8 @@ If you need change, this coin changer will make sure you get the most efficient 
 
 This was written to practice TDD.
 
+An alternative version is on 'array-coin-changer' branch. This is where the input will return an array of the coins needed to give the correct change.
+
 ### Plan
 
 I want to breakdown this kata into smaller more manageable pieces.
