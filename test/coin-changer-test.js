@@ -4,7 +4,7 @@ describe('#CoinChanger', () => {
     });
 
     describe('#initialise', () => {
-        it('till has object by default', () => {
+        it('till has object of denominators by default', () => {
             expect(coinChanger.amount).toEqual(314);
             expect(coinChanger.till).toEqual({
                 100: [],
@@ -96,7 +96,7 @@ describe('#CoinChanger', () => {
         });
     });
     describe('#applyCountsAndreturnCoins', () => {
-        it('Returns the correct amount of coins in an array', () => {
+        it('Counts the denominators of money and then returns the correct amount of coins in an array', () => {
             coinChanger.amount = 199;
             let output = coinChanger.applyCountsAndreturnCoins();
             expect(output).toEqual([100, 50, 20, 20, 5, 1, 1, 1, 1]);
