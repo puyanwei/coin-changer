@@ -95,11 +95,11 @@ describe('#CoinChanger', () => {
             expect(coinChanger.amount).toEqual(0);
         });
     });
-    // describe('#returnCoins', () => {
-    //   it('Returns the correct amount of coins in a string', () => {
-    //     coinChanger.amount = 89;
-    //     let output = coinChanger.returnCoins();
-    //     expect(output).toEqual('QQQDPPPP');
-    //   });
-    // });
+    describe('#returnCoins', () => {
+        it('Returns the correct amount of coins in an array', () => {
+            coinChanger.amount = 189;
+            let output = coinChanger.returnCoins();
+            expect(output).toEqual([100, 50, 20, 10, 5, 1, 1, 1, 1]);
+        });
+    });
 });
