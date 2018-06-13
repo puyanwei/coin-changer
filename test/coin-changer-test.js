@@ -5,7 +5,7 @@ describe('#CoinChanger', () => {
 
     describe('#initialise', () => {
         it('till has object by default', () => {
-            expect(coinChanger.amount).toEqual(39);
+            expect(coinChanger.amount).toEqual(314);
             expect(coinChanger.till).toEqual({
                 100: [],
                 50: [],
@@ -17,17 +17,18 @@ describe('#CoinChanger', () => {
     });
 
     describe('#addToTillAndUpdateAmount', () => {
-      it('Adds number of hundreds to the till array, and updates the amount left', () => {
-        coinChanger.addToTillAndUpdateAmount(300, 100);
-        expect(coinChanger.till).toEqual({
-            100: [100, 100, 100],
-            50: [],
-            25: [],
-            10: [],
-            1: [],
-        };);
-        expect(coinChanger.amount).toEqual(14);
-      });
+        it('Adds number of hundreds to the till array, and updates the amount left', () => {
+            coinChanger.addToTillAndUpdateAmount(100);
+            expect(coinChanger.till).toEqual({
+                100: [100, 100, 100],
+                50: [],
+                25: [],
+                10: [],
+                1: [],
+            });
+            expect(coinChanger.amount).toEqual(14);
+        });
+    });
     //   it('Adds number of dimes to the till by the letter D, and updates the amount left', () => {
     //     coinChanger.addToTillAndUpdateAmount(10, 'D');
     //     expect(coinChanger.till).toEqual({ 25: 0, 10: 'DDD', 1: 0 });

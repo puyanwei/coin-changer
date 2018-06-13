@@ -10,8 +10,9 @@ class CoinChanger {
         };
     }
 
-    addToTillAndUpdateAmount(coin, letter) {
-        this.till[coin] = letter.repeat(Math.floor(this.amount / coin));
+    addToTillAndUpdateAmount(coin) {
+        let noOfCoins = Math.floor(this.amount / coin);
+        this.till[coin] = Array(noOfCoins).fill(coin);
         this.amount = this.amount % coin;
     }
 
