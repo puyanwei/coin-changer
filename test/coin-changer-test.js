@@ -95,11 +95,11 @@ describe('#CoinChanger', () => {
             expect(coinChanger.amount).toEqual(0);
         });
     });
-    describe('#returnCoins', () => {
+    fdescribe('#returnCoins', () => {
         it('Returns the correct amount of coins in an array', () => {
-            coinChanger.amount = 189;
+            coinChanger.amount = 199;
             let output = coinChanger.returnCoins();
-            expect(output).toEqual([100, 50, 20, 10, 5, 1, 1, 1, 1]);
+            expect(output).toEqual([100, 50, 20, 20, 5, 1, 1, 1, 1]);
         });
     });
 });

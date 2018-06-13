@@ -18,10 +18,21 @@ class CoinChanger {
     }
 
     returnCoins() {
-        this.addToTillAndUpdateAmount(25, 'Q');
-        this.addToTillAndUpdateAmount(10, 'D');
-        this.addToTillAndUpdateAmount(1, 'P');
-        let string = this.till[25].concat(this.till[10]).concat(this.till[1]);
-        return string;
+        this.addToTillAndUpdateAmount(100);
+        this.addToTillAndUpdateAmount(50);
+        this.addToTillAndUpdateAmount(20);
+        this.addToTillAndUpdateAmount(10);
+        this.addToTillAndUpdateAmount(5);
+        this.addToTillAndUpdateAmount(1);
+
+        let array = new Array();
+        Object.keys(this.till).forEach((key) => {
+            if (this.till[key].length !== 0) {
+                this.till[key].map((element) => {
+                    array.unshift(element);
+                });
+            }
+        });
+        return array;
     }
 }
