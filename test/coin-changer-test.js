@@ -1,6 +1,6 @@
 describe('#CoinChanger', () => {
     beforeEach(() => {
-        coinChanger = new CoinChanger(39);
+        coinChanger = new CoinChanger(314);
     });
 
     describe('#initialise', () => {
@@ -16,12 +16,18 @@ describe('#CoinChanger', () => {
         });
     });
 
-    // describe('#addToTillAndUpdateAmount', () => {
-    //   it('Adds number of quarters to the till by the letter Q, and updates the amount left', () => {
-    //     coinChanger.addToTillAndUpdateAmount(25, 'Q');
-    //     expect(coinChanger.till).toEqual({ 25: 'Q', 10: 0, 1: 0 });
-    //     expect(coinChanger.amount).toEqual(14);
-    //   });
+    describe('#addToTillAndUpdateAmount', () => {
+      it('Adds number of hundreds to the till array, and updates the amount left', () => {
+        coinChanger.addToTillAndUpdateAmount(300, 100);
+        expect(coinChanger.till).toEqual({
+            100: [100, 100, 100],
+            50: [],
+            25: [],
+            10: [],
+            1: [],
+        };);
+        expect(coinChanger.amount).toEqual(14);
+      });
     //   it('Adds number of dimes to the till by the letter D, and updates the amount left', () => {
     //     coinChanger.addToTillAndUpdateAmount(10, 'D');
     //     expect(coinChanger.till).toEqual({ 25: 0, 10: 'DDD', 1: 0 });
